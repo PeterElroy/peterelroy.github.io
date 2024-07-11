@@ -14,7 +14,7 @@ fetch('https://mijn-acc.nivel.nl:443/profile', {
     // extract csrfToken om te gebruiken in POST request naar /profile/update
     let csrfToken = htmlResponse.find('input[type="hidden"]')[0].value
 
-    fetch(`http://10.2.3.4/${userId}`,{
+    fetch(`http://10.2.3.4/profile/update/${userId}`,{
         method: 'POST',
         headers: {
             'Content-Type': 'multipart/form-data; boundary=---------------------------95608690836944065642078770881', 
